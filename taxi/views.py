@@ -41,9 +41,3 @@ class DriverListView(generic.ListView):
 class DriverDetailView(generic.DetailView):
     model = Driver
     queryset = Driver.objects.prefetch_related("cars").all()
-
-
-class HomeView:
-    @classmethod
-    def as_view(cls):
-        pass
